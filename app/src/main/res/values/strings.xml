@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Wordle</string>
+    <string name="guessBtnTxt">Guess</string>
+</resources>
