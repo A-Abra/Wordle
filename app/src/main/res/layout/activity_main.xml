@@ -10,7 +10,7 @@
         android:id="@+id/userInput"
         android:layout_width="318dp"
         android:layout_height="65dp"
-        android:hint="Enter Four Letter Word"
+        android:hint="@string/InputPreText"
         android:maxLength="4"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,5 +25,122 @@
         android:text="@string/guessBtnTxt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/guessOne"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:visibility="invisible"
+        android:text="Guess #1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkOne"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:visibility="invisible"
+        android:text="Guess #1 Check"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/guessTwo"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="84dp"
+        android:visibility="invisible"
+        android:text="Guess #2"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkTwo"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="124dp"
+        android:visibility="invisible"
+        android:text="Guess #2 Check"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/guessThree"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="164dp"
+        android:visibility="invisible"
+        android:text="Guess #3"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkThree"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="204dp"
+        android:visibility="invisible"
+        android:text="Guess #3 Check"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="352dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!--
+    <TextView
+        android:id="@+id/guesses_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DEBUG_view_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

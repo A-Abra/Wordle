@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Wordle</string>
     <string name="guessBtnTxt">Guess</string>
+    <string name="InputPreText">Enter Four Letter Word</string>
 </resources>
