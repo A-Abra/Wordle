@@ -36,7 +36,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/)
 
 ## Notes
 
-The keyboard pushes previous guesses out of the user's view whenever the app was open as well as issues with guesses staying on the right hand side of the app. Could not implement a way to keep the guesses on screen. Fixed the issue with keeping guesses on right hand side.
+The keyboard pushes previous guesses out of the user's view whenever the app was open as well as issues with guesses staying on the right hand side of the app. Used android:windowSoftInputMode="adjustResize" in order to fix the problem. Also fixed the issue with keeping guesses on right hand side.
 
 
 ## License
