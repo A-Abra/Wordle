@@ -3,6 +3,7 @@ package com.example.wordle
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.EditText
@@ -15,12 +16,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val wordToGuess = FourLetterWordList.getRandomFourLetterWord()
-        var guessOne = findViewById<TextView>(R.id.guessOne)
-        var checkOne = findViewById<TextView>(R.id.checkOne)
-        var guessTwo = findViewById<TextView>(R.id.guessTwo)
-        var checkTwo = findViewById<TextView>(R.id.checkTwo)
-        var guessThree = findViewById<TextView>(R.id.guessThree)
-        var checkThree = findViewById<TextView>(R.id.checkThree)
+        val guessOne = findViewById<TextView>(R.id.guessOne)
+        val checkOne = findViewById<TextView>(R.id.checkOne)
+        val guessTwo = findViewById<TextView>(R.id.guessTwo)
+        val checkTwo = findViewById<TextView>(R.id.checkTwo)
+        val guessThree = findViewById<TextView>(R.id.guessThree)
+        val checkThree = findViewById<TextView>(R.id.checkThree)
         val ansView = findViewById<TextView>(R.id.answer)
         val guessInput = findViewById<Button>(R.id.guessBtn)
         val editText = findViewById<EditText>(R.id.userInput)
@@ -38,18 +39,37 @@ class MainActivity : AppCompatActivity() {
 
             // guesses remaining conditional
             if (guesses != 0) {
-                var correctGuess = false
-                val editTextString = editText.text.toString().uppercase(Locale.getDefault())   // to string for edit text
-                if (editTextString.length == 4) {
+                val editTextStr = editText.text.toString().uppercase(Locale.getDefault())   // to string for edit text
+                if (editTextStr.length == 4) {
                     ansView.text = ""
-                    val result = checkGuess(editTextString, wordToGuess)
-                    checkGuess(editTextString, wordToGuess)
+                    val result = checkGuess(editTextStr, wordToGuess)
+                    checkGuess(editTextStr, wordToGuess)
+
+                    if(guesses == 3) {
+                        guessOne.text = getString(R.string.guess_1)+"               "+editTextStr
+                        checkOne.text = getString(R.string.guess_1_check)+"     "+result
+                        guessOne.visibility = View.VISIBLE
+                        checkOne.visibility = View.VISIBLE
+                    }
+
+                    else if(guesses == 2) {
+                        guessTwo.text = getString(R.string.guess_2)+"               "+editTextStr
+                        checkTwo.text = getString(R.string.guess_2_check)+"     "+result
+                        guessTwo.visibility = View.VISIBLE
+                        checkTwo.visibility = View.VISIBLE
+                    }
+
+                    else if(guesses == 1) {
+                        guessThree.text = getString(R.string.guess_3)+"               "+editTextStr
+                        checkThree.text = getString(R.string.guess_3_check)+"     "+result
+                        guessThree.visibility = View.VISIBLE
+                        checkThree.visibility = View.VISIBLE
+                    }
 
                     // guessed right
                     if (result == "OOOO") {
-                        ansView.text = "Correct! Answer: $wordToGuess"
+                        ansView.text = "Correct: $wordToGuess"
                         guessInput.text = "Reset"
-                        correctGuess = true
                         guesses = 0
                     } else {
                         guesses--
